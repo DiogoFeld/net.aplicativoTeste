@@ -40,8 +40,11 @@ function App() {
     );
     
     async function populateWeatherData() {
-        const response = await fetch('weatherforecast');
+        let url = "https://localhost:7230/WeatherForecast";       
+        
+        const response = await fetch(url, {mode:'cors'});
         const data = await response.json();
+        
         setForecasts(data);
     }
 }

@@ -34,28 +34,28 @@
 
     <main class="main">
         <div class="sideBar" id="sideBar">
-            <a href="triagem.html">
+            <a href="index.html">
                 <div class="sideBarDiv">
-                    <label>Triagens</label>
+                    <label>Lista de Atendimentos</label>
                 </div>
             </a>
         </div>
 
         <div class="MainContent">
+            <h2>Triagens</h2>
+
 
             <div class="MainContentMenu">
-                <h2>Fila de Atendimento </h2>
+                <h2>Historico de Triagens</h2>
 
-                <button onclick="openModalAtendimento()">Cadastro de Pacientes</button>
-
-                <button onclick="openModal()">Cadastro de Atendimento</button>
+                <button onclick="openModal()">Cadastro de Triagem</button>
 
             </div>
 
 
             <div class="mainContentTableDiv">
 
-                <h4>Pacientes Aguardando Atendimento</h4>
+                <h4>Historico de Triagem</h4>
                 <table>
                     <thead>
                         <tr>
@@ -75,23 +75,20 @@
                         <tr>
                             <td>Josiane</td>
                             <td>23</td>
-                            <td>Perna com perfuração por Boi</td>
+                            <td>Perna com perfuracao por Boi</td>
                             <td>Em Atendimento</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <!--<h2>Triagens</h2>
-
-            <div id="root"></div>-->
-
+            <!--<div id="root"></div>-->
         </div>
     </main>
 
     <footer class="mainFooter">
         <div class="footerDiv">
-            <a href="https://github.com/DiogoFeld">
+            <a>
                 <label class="footerLabels">By Diogo</label>
             </a>
             <a>
@@ -104,12 +101,12 @@
 
     </div>
 
-    <!--FORMS-->
+        <!--MODAL-->
 
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal">
             <button class="close-btn" onclick="closeModal()">&times;</button>
-            <h2>Registro de Atendimento</h2>
+            <h2>Registro de Triagem</h2>
             <form action="#" method="POST">
                 <div class="form-group">
                     <label for="nome">Nome:</label>
@@ -129,31 +126,6 @@
             </form>
         </div>
     </div>
-
-    <div class="modal-overlay" id="modalOverlayAtendimento">
-        <div class="modal">
-            <button class="close-btn" onclick="closeModalAtendimento()">&times;</button>
-            <h2>Formulário de Paciente</h2>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name="senha" required>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Enviar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
 
     <!--script SideBar-->
     <script src="/Shared/shared.js"></script>

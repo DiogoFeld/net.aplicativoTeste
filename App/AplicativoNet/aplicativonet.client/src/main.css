@@ -1,0 +1,84 @@
+.MainContent {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-content: flex-start;
+    color: #e7f1de;
+}
+
+
+.card {
+    width: 450px;
+    height: 600px;
+    max-height: 600px;
+    background-color: burlywood;
+    border: #5a3d17 solid 4px;
+    border-radius: 8px;
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardImage {
+    background-color: #d3a76d;
+
+    height: 60%;
+    border: 6px solid #5a3d17;
+    overflow: hidden;
+}
+
+.cardImage img {
+    background-size: cover;
+    width: 100%;
+}
+
+.cardLabels {
+    height: 40%;
+}
+
+.cardLabels>p {
+    margin: 5px 1rem;
+}
+
+.cardLabels p:nth-child(2) {
+    font-weight: bold;
+}
+
+
+.cardLabels h3 {
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 2px;
+}
+
+
+.mediumPhoto {
+    width: 130% !important;
+}
+
+.highPhoto {
+    width: 160% !important;
+}
+
+
+
+@media(max-width:530px) {
+
+    .MainContent {
+        padding: 0rem;
+        width: 100%;
+    }
+
+    .card {
+        width: 95%;
+        height: auto;
+    }
+
+    .mainContentMuseumOption{
+        display: flex;
+        flex-direction: column;    
+    }
+
+}

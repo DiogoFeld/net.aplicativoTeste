@@ -22,9 +22,15 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPacienteRepository, PacienteRepository>();
 builder.Services.AddScoped<ITriagemRepository, TriagemRepository>();
 builder.Services.AddScoped<IAtendimentoRepository, AtendimentoRepository>();
+builder.Services.AddCors();
 
 
 var app = builder.Build();
+
+app.UseCors(options =>
+     options.WithOrigins("https://localhost:5173")
+            .AllowAnyHeader()
+            .AllowAnyMethod());
 
 app.UseDefaultFiles();
 app.UseStaticFiles();

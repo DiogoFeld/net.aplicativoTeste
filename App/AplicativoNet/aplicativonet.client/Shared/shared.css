@@ -1,0 +1,205 @@
+/* all code that must be shared between files */
+
+html {
+    height: 100%;
+}
+
+html,
+
+body {
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /*display: grid;*/
+    grid-template-rows: 4rem auto 5rem;
+    align-items: center;
+}
+
+
+/*               mainHeader         */
+.mainHeader {
+    height: 70px;
+    width: 100%;
+    background-color: rgb(222, 244, 202);
+    align-items: center;
+    margin-bottom: 2px;
+    display: flex;
+    border: 1px solid #61321d;
+    justify-content: space-between;
+}
+
+.mainHeaderMenuDiv {
+    display: block !important;
+    margin-left: 20px;
+}
+
+#menuHeaderButton {
+    width: 36px;
+}
+
+.mainHeader > div {
+    display: flex;
+    width: 180px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.mainHeader button {
+    background-color: rgb(37, 114, 24);
+    color: rgb(201, 233, 195);
+    padding: 9px;
+    border-radius: 10px;
+    border: 1px solid #490e0e;
+}
+
+
+    .mainHeader button:hover {
+        transform: scale(1.05);
+        color: white;
+        background-color: rgb(71, 151, 59);
+    }
+
+
+.mainHeader img {
+    width: 35px;
+    border: 3px solid black;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+    .mainHeader img:hover {
+        background-color: black;
+    }
+
+    .mainHeader img:active {
+        background-color: burlywood;
+    }
+
+.mainHeader h2 {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    font-weight: bolder;
+    font-style: italic;
+    text-shadow: rgba(0, 0, 0, 0.1) -1px 0, rgba(0, 0, 0, 0.1) 0 -1px, rgba(178 34 34 / 20%) 1px 0, rgba(178 34 34 / 20%) 0 1px, rgba(0, 0, 0, 0.1) -1px -1px, rgba(178 34 34 / 20%) 1px 1px;
+    font-size: 2.5rem;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(30 83 21);
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    border: 2px solid black;
+}
+
+/*              SIDEBAR      */
+.sideBar {
+    width: 100%;
+    background-color: rgb(114, 186, 103);
+    transition: width 0.5s linear;
+    border-right: 2px solid black;
+    overflow: hidden;
+}
+
+    .sideBar div {
+        padding: 6px;
+        font-size: 1.3rem;
+        color: #cdb1b1;
+        background-color: rgb(37, 114, 24);
+        margin: 8px;
+        border-radius: 7px;
+        text-align: center;
+        overflow: hidden;
+    }
+
+.sidebarClose {
+    width: 25%;
+    overflow: hidden;
+}
+
+
+.sideBarDiv:hover {
+    color: white;
+    background-color: rgb(37, 114, 24);
+    font-weight: bolder;
+    transform: scale(1.01)
+}
+
+.sideBar a,
+.sideBar label {
+    cursor: pointer;
+}
+
+.sideBar a {
+    text-decoration: none;
+}
+
+/*           foooter        */
+
+.mainFooter {
+    height: 5rem;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+}
+
+    .footerDiv a {
+        text-decoration: none;
+    }
+
+.footerLabels {
+    font-size: 1.3rem;
+    color: rgb(172, 172, 172);
+}
+
+    .footerLabels:hover {
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+
+.offset {
+    opacity: 0;
+    background-color: black;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: none;
+}
+
+@media(max-width:440px) {
+    #mainTitle {
+        display: none;
+    }
+
+    .sidebarClose {
+        width: 1%;
+    }
+
+    .footerDiv {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+@media(max-width:700px) {
+    .main {
+        grid-template-columns: 1% 99%;
+    }
+}
