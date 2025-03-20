@@ -1,0 +1,10 @@
+USE [AplicativoNet]
+GO
+SET IDENTITY_INSERT [dbo].[Pacientes] ON 
+GO
+INSERT [dbo].[Pacientes] ([id], [Nome], [Sexo], [Email], [Telefone]) VALUES (1, N'Joao', N'masculino', N'joao@hmail.com', 1456843)
+GO
+INSERT [dbo].[Pacientes] ([id], [Nome], [Sexo], [Email], [Telefone]) VALUES (2, N'Maria', N'feminino', N'maria@ana', 123123)
+GO
+SET IDENTITY_INSERT [dbo].[Pacientes] OFF
+GO
