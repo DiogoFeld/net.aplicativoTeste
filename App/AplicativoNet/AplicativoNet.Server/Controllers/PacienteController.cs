@@ -33,7 +33,7 @@ namespace AplicativoNet.Server.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<bool>> Create(Paciente vo)
+        public async Task<ActionResult<bool>> Create([FromBody] Paciente vo)
         {
             if (vo == null) return BadRequest();
             var pacienteCreated = await _pacientRepository.Create(vo);

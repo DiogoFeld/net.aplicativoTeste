@@ -46,40 +46,17 @@
             <div class="MainContentMenu">
                 <h2>Fila de Atendimento </h2>
 
-                <button onclick="openModalAtendimento()">Cadastro de Pacientes</button>
+                <button onclick="openModalAtendimento()">Cadastro de Atendimento</button>
 
-                <button onclick="openModal()">Cadastro de Atendimento</button>
+                <button onclick="openModal()">Cadastro de Pacientes</button>
 
             </div>
 
 
-            <div class="mainContentTableDiv">
+            <div class="mainContentTableDiv" id="tabelaPaciente">
 
-                <h4>Pacientes Aguardando Atendimento</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <td>NOME</td>
-                            <td>Ordem</td>
-                            <td>Sintomas</td>
-                            <td>Status</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Artur</td>
-                            <td>22</td>
-                            <td>Tosse</td>
-                            <td>Esperando Atendimento</td>
-                        </tr>
-                        <tr>
-                            <td>Josiane</td>
-                            <td>23</td>
-                            <td>Perna com perfuração por Boi</td>
-                            <td>Em Atendimento</td>
-                        </tr>
-                    </tbody>
-                </table>
+
+
             </div>
 
             <!--<h2>Triagens</h2>
@@ -105,47 +82,21 @@
     </div>
 
     <!--FORMS-->
-
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="modal">
-            <button class="close-btn" onclick="closeModal()">&times;</button>
-            <h2>Registro de Atendimento</h2>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name="senha" required>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Enviar</button>
-                </div>
-            </form>
-        </div>
-    </div>
+    <div id="formPaciente"></div>
+   
 
     <div class="modal-overlay" id="modalOverlayAtendimento">
         <div class="modal">
             <button class="close-btn" onclick="closeModalAtendimento()">&times;</button>
-            <h2>Formulário de Paciente</h2>
+            <h2>Formulário de Atendimento</h2>
             <form action="#" method="POST">
                 <div class="form-group">
-                    <label for="nome">Nome:</label>
+                    <label for="nome">Nome do Paciente:</label>
                     <input type="text" id="nome" name="nome" required>
-                </div>
+                </div>             
                 <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name="senha" required>
+                    <label for="status">Status:</label>
+                    <input type="password" id="status" name="status" required>
                 </div>
                 <div class="form-group">
                     <button type="submit">Enviar</button>
